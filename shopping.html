@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plant Palace - Shopping</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>Cart
+  
+    <nav class="nav">
+      <div class="logo">
+        <img src="log.png" height="50px" width="90px" alt="Company Logo">
+    </div>
+      <ul class="links">
+        <li><a href="HOME.html">HOME</a></li>
+        <li><a href="ABOUT.html">ABOUT</a></li>
+        <li><a href="CONTACT.html">CONTACT</a></li>
+        <li><a href="SHOPPING.html">SHOPPING</a></li>
+        <li><a href="HOW TO PLANT.html">HOW TO PLANT</a></li>
+      </ul>
+      <div class="menu">
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" onclick="toggleCart()">
+      <img src="cart icon.png" alt="Cart Icon" />
+      <span id="cart-count">0</span>
+    </div>
+
+    <script>
+      document
+        .querySelector(".nav-toggle")
+        .addEventListener("click", function () {
+          const links = document.querySelector(".links");
+          links.classList.toggle("active");
+        });
+    </script>
+
+    <!-- Shopping Section -->
+    <section class="shopping-section">
+      <h1>Shop Our Plants</h1>
+      <p>free shipping on orders over $50</p>
+      <p>Get 10% off your first order with code WELCOME10</p>
+      <p>Shop our collection of indoor and outdoor plants</p>
+      <p>Find the perfect plant for your home or garden</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for plants..." />
+        <button type="submit">Search</button>
+      <div class="product-container">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="succulents-beginners-940x675.webp" alt="Plant 1" />
+          <h2>Succulent Plant</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$10.00</p>
+          <button class="add-to-cart" onclick="addToCart('Succulent Plant', 10)">
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="PLANTA-FICUS-PANDURATA-1-.jpg" alt="Plant 2" />
+          <h2>Fiddle Leaf Fig</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$25.00</p>
+          <button class="add-to-cart" onclick="addToCart('Fiddle Leaf Fig', 25)">
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+          <img src="snake pl.avif" alt="Plant 3" />
+          <h2>Snake Plant</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$15.00</p>
+          <button class="add-to-cart" onclick="addToCart('Snake Plant', 15)">
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+          <img src="money.webp" alt="Plant 4" />
+          <h2>Money Plant</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$20.00</p>
+          <button class="add-to-cart" onclick="addToCart('Money Plant', 20)">
+            <i class="fas fa-cart-plus"></i> Add to Cart
+          </button>
+      </div>
+        <!-- Product 5 -->
+        <div class="product">
+          <img src="peace-lily-01.jpg" alt="Plant 5" />
+          <h2>Peace Lily</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$18.00</p>
+          <button class="add-to-cart" onclick="addToCart('Peace Lily', 18)">
+            <i class="fas fa-cart-plus"></i>Add to Cart
+          </button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+          <img src="spider.webp" alt="Plant 6" />
+          <h2>Spider Plant</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$12.00</p>
+          <button class="add-to-cart" onclick="addToCart('Spider Plant', 12)">
+            <i class="fas fa-cart-plus"></i>Add to Cart
+          </button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+          <img src="pothos.webp" alt="Plant 7" />
+          <h2>Pothos Plant</h2>
+          <div class="star-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>$14.00</p>
+          <button class="add-to-cart" onclick="addToCart('Pothos Plant', 14)">
+            <i class="fas fa-cart-plus"></i>Add to Cart
+          </button>
+    </section>
+<!-- Shopping Section -->
+<section class="shopping-section">
+  <h1>Herbal plants</h1>
+  
+  <div class="product-container">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="aloe vera.jpg" alt="Plant 1" />
+      <h2>Aloe vera</h2>
+      <h5>Skin healing</h5>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$10.00</p>
+      <button
+        class="add-to-cart"
+        onclick="addToCart('Succulent Plant', 10)"
+      >
+      <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="canabis.jpg" alt="Plant 2" />
+      <h2>Cannabis/marijuana</h2>
+      <h5>Pain relief</h5>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$25.00</p>
+      <button
+        class="add-to-cart"
+        onclick="addToCart('Fiddle Leaf Fig', 25)"
+      >
+      <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="Alisma-plantago-aquatica-.jpg" alt="Plant 3" />
+      <h2>Alisma-plantago</h2>
+      <h5>Urinary health</h5>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$15.00</p>
+      <button class="add-to-cart" onclick="addToCart('Snake Plant', 15)">
+        <i class="fas fa-cart-plus"></i>Add to Cart
+      </button>
+    </div>
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="achillea millefolium.jpg" alt="Plant 4" />
+      <h2>achillea millefolium</h2>
+      <h5>Traditional remedy</h5>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$20.00</p>
+      <button class="add-to-cart" onclick="addToCart('Money Plant', 20)">
+        <i class="fas fa-cart-plus"></i>Add to Cart
+      </button>
+  </div>
+    <!-- Product 5 -->
+    <div class="product">
+      <img src="ageratina altissima.jpg" alt="Plant 5" />
+      <h2>white snakeroot</h5>
+      <h5>Anti-inflammatory</h5>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$18.00</p>
+      <button class="add-to-cart" onclick="addToCart('Peace Lily', 18)">
+        <i class="fas fa-cart-plus"></i>Add to Cart
+      </button>
+    </div>
+    <!-- Product 6 -->
+    <div class="product">
+      <img src="spider.webp" alt="Plant 6" />
+      <h2>Spider Plant</h2>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$12.00</p>
+      <button class="add-to-cart" onclick="addToCart('Spider Plant', 12)">
+        <i class="fas fa-cart-plus"></i>Add to Cart
+      </button>
+    </div>
+    <!-- Product 7 -->
+    <div class="product">
+      <img src="pothos.webp" alt="Plant 7" />
+      <h2>Pothos Plant</h2>
+      <div class="star-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <p>$14.00</p>
+      <button class="add-to-cart" onclick="addToCart('Pothos Plant', 14)">
+        <i class="fas fa-cart-plus"></i>Add to Cart
+      </button>
+</section>
+<p> Thank You For Patronized Us</p>
+<p> We are happy to serve you</p>
+
+
+
+<!-- <div class="image-hover-container">
+  <img src="canabis.jpg" alt="Plant" />
+  <div class="hover-text">This is a plant</div>
+</div> -->
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-modal-content">
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+          <p>No items in the cart.</p>
+        </div>
+        <p id="total-price">Total: $0.00</p>
+        <!-- Payment Section -->
+        <div class="payment-section">
+          <h3>Choose Payment Method</h3>
+          <form id="payment-form">
+            <label>
+              <input
+                type="radio"
+                name="payment-method"
+                value="credit-card"
+                required
+              />
+              Credit Card/Debit Card </label
+            ><br />
+            <label>
+              <input type="radio" name="payment-method" value="paypal" />
+              PayPal </label
+            ><br />
+            <label>
+              <input
+                type="radio"
+                name="payment-method"
+                value="cash-on-delivery"
+              />
+              Cash on Delivery </label
+            ><br />
+            <button type="submit" class="checkout-btn">
+              Proceed to Checkout
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      const cart = [];
+      let totalPrice = 0;
+
+      function addToCart(productName, productPrice) { 
+        cart.push({ name: productName, price: productPrice });
+        totalPrice += productPrice;
+
+        // Update cart display
+        const cartItems = document.getElementById("cart-items");
+        cartItems.innerHTML = cart
+          .map((item) => `<p>${item.name} - $${item.price.toFixed(2)}</p>`)
+          .join("");
+        document.getElementById(
+          "total-price"
+        ).innerText = `Total: $${totalPrice.toFixed(2)}`;
+
+        // Update cart count
+        document.getElementById("cart-count").innerText = cart.length;
+      }
+
+      function toggleCart() {
+        const cartModal = document.getElementById("cart-modal");
+        cartModal.style.display =
+          cartModal.style.display === "block" ? "none" : "block";
+      }
+
+      // Close the modal when clicking outside of it
+      window.onclick = function (event) {
+        const cartModal = document.getElementById("cart-modal");
+        if (event.target === cartModal) {
+          cartModal.style.display = "none";
+        }
+      };
+
+      // Handle payment form submission
+      document.getElementById("payment-form").onsubmit = function (event) {
+        event.preventDefault();
+        const paymentMethod = document.querySelector(
+          'input[name="payment-method"]:checked'
+        ).value;
+        alert(
+          `You selected ${paymentMethod} as your payment method. Proceeding to checkout...`
+        );
+        // Here you can add further logic to handle the payment process
+        // For example, you can send the cart data to your server for processing
+        if (cart.length === 0) {
+          alert("Your cart is empty. Please add items to your cart.");
+        } else {
+          alert(
+            `Thank you for your purchase! Your total is $${totalPrice.toFixed(
+              2
+            )}.`
+          );
+          // Clear the cart after checkout
+          cart.length = 1;
+          totalPrice = 0;
+          document.getElementById("cart-items").innerHTML =
+            "<p>No items in the cart.</p>";
+          document.getElementById("total-price").innerText = `Total:`;
+          document.getElementById("cart-count").innerText = "0";    
+        }
+        if (cart.length === 1) {
+          alert("your items are. Please press okay to proceed.");
+          alert(
+            `Thank you for your purchase! Your total is $${totalPrice.toFixed(
+              2
+            )}.`
+          );
+        } else {
+          alert(
+            `you have successfull purchase plants $${totalPrice.toFixed(
+              2
+            )}.`
+          );
+          // Clear the cart after checkout
+          cart.length = 1;
+          totalPrice = 1;
+          document.getElementById("cart-items").innerHTML =
+            "<p>No items in the cart.</p>";
+          document.getElementById("total-price").innerText = "Total: $0.00";
+          document.getElementById("cart-count").innerText = "1";
+        }
+        if (cart.length === 2) {
+          alert("your are about to make a purchase. Please press okay to proceed or cancel.");
+          alert(
+            `Thank you for your purchase! Your total is $${totalPrice.toFixed(
+              2
+            )}.`
+          );
+        } else {
+          alert(
+            `you have successfull purchase plants $${totalPrice.toFixed(
+              2
+            )}.`
+          );
+      //     // Clear the cart after checkout
+      //     cart.length = 2;
+      //     totalPrice = 2;
+      //     document.getElementById("cart-items").innerHTML =
+      //       "<p>No items in the cart.</p>";
+      //     document.getElementById("total-price").innerText = "Total: $0.00";
+      //     document.getElementById("cart-count").innerText = "2";
+      //   }
+      };
+      };
+    </script>
+
+    <script src="javascripts.js"></script>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+          <img src="log.png" alt="Plant Store Logo" />
+          <p>Your trusted source for plants and gardening tips.</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="HOME.html">Home</a></li>
+            <li><a href="ABOUT.html">About Us</a></li>
+            <li><a href="CONTACT.html">Contact</a></li>
+            <li><a href="shopping.html">Shop</a></li>
+            <li><a href="HOW TO PLANT.html">How to Plant</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Meise Botanic Garden<br> Nieuwelaan 38<br> 1860 Meise, Belgium</p>
+          <p>Phone: <a href="tel:+1 (554)-784-6532">+1 (554)-784-6532</a></p>
+          <p>Email: <a href="mailto:plantpalace@mail.com">plantpalace@mail.com</a></p>
+          <p>Follow us on social media for the latest updates!</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="#"><img src="fb.jpg" alt="Facebook" /></a>
+          <a href="#"><img src="twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="ig.jpg" alt="Instagram" /></a>
+          <a href="#"><img src="linked.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Plant Store. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: cornflowerblue;">
+
+    <nav class="nav">
+        <div class="logo">
+            <img src="log.png" height="50px" width="90px" alt="Company Logo">
+        </div>
+        <ul class="links">
+            <li><a href="HOME.html">HOME</a></li>
+            <li><a href="ABOUT.html">ABOUT</a></li>
+            <li><a href="CONTACT.html">CONTACT</a></li>
+            <li><a href="shopping.html">SHOPPING</a></li>
+            <li><a href="HOW TO PLANT.html">HOW TO PLANT</a></li>
+        </ul>
+        <div class="menu">
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+    </nav>
+    
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        });
+    </script>
+    
+ 
+    <!-- <img src="bac fl.jpeg" width="100%" height="" alt="">  -->
+
+    <!-- Contact Us Section -->
+    <section class="contact-us" style="background-color: cyan;">
+        <h1>Contact Us</h1>
+        <div class="contact-content">
+            <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
+            <form action="https://formspree.io/f/mdkarndr" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required minlength="3">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="tel: +1 806-564-5648"><a href="tel:+1 708-2323476">Call Us</label></a>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Logo -->
+      <div class="footer-logo">
+        <img src="log.png" alt="Company Logo">
+        <p>Bringing nature closer to you.</p>
+      </div>
+  
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="HOME.html">Home</a></li>
+          <li><a href="ABOUT.html">About</a></li>
+          <li><a href="CONTACT.html">Contact</a></li>
+          <li><a href="SHOPPING.html">Shop</a></li>
+          <li><a href="HOW TO PLANT.html">How to Plant</a></li>
+        </ul>
+      </div>
+  
+      <!-- Footer Contact -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@petalplants.com</p>
+        <p>Phone: +1 5646 456 7890</p>
+        <p>Address: 123 Green Street, Plant City</p>
+      </div>
+  
+      <!-- Footer Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="facebook.com"><img src="fb.jpg" alt="Facebook"></a>
+        <a href="x.com"><img src="twitter.png" alt="Twitter"></a>
+        <a href="instagram.com"><img src="ig.jpg" alt="Instagram"></a>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Petal Plants. All rights reserved.</p>
+    </div>
+  </footer>
+      <!-- Google Map Embed -->
+      <div class="footer-map">
+          <h2>Our Location</h2>
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d144.9630579153169!3d-37.8141079797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d7f7f5e9f0b!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614031234567!5m2!1sen!2sau" 
+              width="100%" 
+              height="300" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+          </iframe>
+      </div>
+      <!-- </footer> -->
+      <!-- <div class="footer"> -->
+          <div class="footer1">
+            <h2>Plant Palace</h2><br>
+            <br> <br>
+           
+          </div>
+          <div class="footer2">
+            <h2>Opening hours</h2>
+            <p>Open daily from 9.30 a.m. to 5 p.m.<br> Last admission at 4 p.m.<br> Closed on 25 December and 1 January</p>
+          </div>
+          <div class="footer3">
+            <h2>Admission</h2>
+            <p>Adults: € 7<br> Seniors: € 6<br> Children (6-17 years): € 3<br> Children under 6 years: free</p>
+          </div>
+          <div class="footer4">
+            <h2>Contact</h2>
+            <p>+1 (554)-784-6532<br> plantpalace@mail.com <br> &copysr;2025</p>
+          </div>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+            AOS.init();
+          </script>
+          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script>
+              AOS.init({
+                  duration: 1000, // Animation duration in milliseconds
+                  once: true, // Whether animation should happen only once
+              });
+          </script>
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  
+  <script src="scripts.js"></script>
+  <script>
+      // Get the button
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  
+      // Show the button when the user scrolls down 20px from the top
+      window.onscroll = function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              scrollToTopBtn.style.display = "block";
+          } else {
+              scrollToTopBtn.style.display = "none";
+          }
+      };
+  
+      // Scroll to the top when the button is clicked
+      scrollToTopBtn.onclick = function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+  </script>
+  
+  <script src="javascripts.js"></script>
+  <script src="../../assets/vendor/aos/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </body>
+  </html>
+  
+  
