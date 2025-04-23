@@ -1,32 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plant Palace - Shopping</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/vendor/aos/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="shortcut icon" href="log.png" type="image/x-icon">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
   </head>
-  <body>Cart
+  <body>
+    <style>
+      .video {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .video .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(16, 5, 87);
+        text-align: center;
+      }
+      
+      .video p {
+        top: 80%;
+        left: 50%;
+        position: absolute;
+        color: blue;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .video h2 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(39, 34, 95);
+        font-size: 2rem;
+        text-align: center;
+      }
+      .video h2:hover {
+        color: yellow;
+        text-decoration: underline;
+      } 
+      .video p:hover {
+        color: yellow;
+        text-decoration: underline;
+      }
+      .video img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .video video:hover {
+        opacity: 0.8;
+      }
+      .video h2:hover {
+        color: yellow;
+        text-decoration: underline;
+      }   
+      P video{
+        position: absolute;
+        color: blue;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        
+      }
+      
+    </style>
   
-    <nav class="nav">
-      <div class="logo">
+  <nav class="nav">
+    <div class="logo">
         <img src="log.png" height="50px" width="90px" alt="Company Logo">
     </div>
-      <ul class="links">
-        <li><a href="HOME.html">HOME</a></li>
-        <li><a href="ABOUT.html">ABOUT</a></li>
-        <li><a href="CONTACT.html">CONTACT</a></li>
-        <li><a href="SHOPPING.html">SHOPPING</a></li>
-        <li><a href="HOW TO PLANT.html">HOW TO PLANT</a></li>
-      </ul>
-      <div class="menu">
+    <ul class="links">
+        <li><a href="HOME.html"><i class="fas fa-home"></i><span>HOME</span></a></li>
+        <li><a href="ABOUT.html"><i class="fas fa-info-circle"></i><span>ABOUT</span></a></li>
+        <li><a href="CONTACT.html"><i class="fas fa-envelope"></i><span>CONTACT</span></a></li>
+        <li><a href="SHOPPING.html"><i class="fas fa-shopping-cart"></i><span>SHOPPING</span></a></li>
+        <li><a href="HOW TO PLANT.html"><i class="fas fa-seedling"></i><span>HOW TO PLANT</span></a></li>
+        <li><a href="HOW TO PLANT.html"><i class="fas fa-seedling"></i><span>HERBAL PLANTS</span></a></li>
+
+    </ul>
+    <div class="menu">
         <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      </div>
-    </nav>
+    </div>
+</nav>
+    <div class="video">
+      <h2>Welcome to Petal Palace<br>buy 20 items and get 1 apple product free</h2>
+      <p>shop now</p>
+        <video autoplay muted loop  id="myVideo" style="width: 100%; height: 90%; object-fit: cover;">
+            <source src="large_2x.mp4" type="video/mp4" >
+            <img src="pl2.jpeg" alt="" style="width: 100%; height: 90%; object-fit: cover;">
+            <!-- Fallback content for browsers that do not support HTML5 video -->
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
 
     <!-- Cart Icon -->
     <div class="cart-icon" onclick="toggleCart()">
@@ -296,9 +378,6 @@
 </section>
 <p> Thank You For Patronized Us</p>
 <p> We are happy to serve you</p>
-
-
-
 <!-- <div class="image-hover-container">
   <img src="canabis.jpg" alt="Plant" />
   <div class="hover-text">This is a plant</div>
@@ -343,9 +422,28 @@
             </button>
           </form>
         </div>
+        <form id="payment-form">
+          <h3>Select Payment Method:</h3>
+          <label>
+              <input type="radio" name="payment-method" value="Credit Card" required>
+              Credit Card
+          </label>
+          <label>
+              <input type="radio" name="payment-method" value="PayPal" required>
+              PayPal
+          </label>
+          <label>
+              <input type="radio" name="payment-method" value="Bank Transfer" required>
+              Bank Transfer
+          </label>
+          <button type="submit">Pay Now</button>
+      </form>
       </div>
     </div>
     <script>
+      // Cart functionality
+      // Initialize cart and total price
+    
       const cart = [];
       let totalPrice = 0;
 
@@ -407,17 +505,17 @@
           document.getElementById("total-price").innerText = `Total:`;
           document.getElementById("cart-count").innerText = "0";    
         }
-        if (cart.length === 1) {
+        if (cart.length === 2) {
           alert("your items are. Please press okay to proceed.");
           alert(
             `Thank you for your purchase! Your total is $${totalPrice.toFixed(
-              2
+              0
             )}.`
           );
         } else {
           alert(
             `you have successfull purchase plants $${totalPrice.toFixed(
-              2
+              
             )}.`
           );
           // Clear the cart after checkout
@@ -428,17 +526,17 @@
           document.getElementById("total-price").innerText = "Total: $0.00";
           document.getElementById("cart-count").innerText = "1";
         }
-        if (cart.length === 2) {
+        if (cart.length === 1) {
           alert("your are about to make a purchase. Please press okay to proceed or cancel.");
           alert(
             `Thank you for your purchase! Your total is $${totalPrice.toFixed(
-              2
+              0
             )}.`
           );
         } else {
           alert(
             `you have successfull purchase plants $${totalPrice.toFixed(
-              2
+              1
             )}.`
           );
       //     // Clear the cart after checkout
